@@ -65,9 +65,9 @@ class Home extends Component {
     }
 
     const response = await fetch(url, options)
-    const data = await response.json()
 
     if (response.ok === true) {
+      const data = await response.json()
       const updatedData = data.videos.map(eachItem => ({
         id: eachItem.id,
         channel: {
@@ -168,15 +168,14 @@ class Home extends Component {
         return (
           <FailureContainer>
             <FailureImg src={imgUrl} alt="failure view" />
-
             <FailureText theme={theme}>Oops! Something Went Wrong</FailureText>
             <FailureText theme={theme} as="p">
               We are having some trouble to complete your request. Please try
               again
             </FailureText>
-            <RetryButton type="button" onClick={this.getVideos}>
+            <button type="button" onClick={this.getVideos}>
               Retry
-            </RetryButton>
+            </button>
           </FailureContainer>
         )
       }}

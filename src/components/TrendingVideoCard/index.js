@@ -48,7 +48,7 @@ const TrendingVideoCard = props => {
               className="link"
               onClick={() => changeActiveMenu('INITIAL')}
             >
-              <VideoCardContainer>
+              <VideoCardContainer as="li">
                 <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
                 <ThumbnailText>
                   <div>

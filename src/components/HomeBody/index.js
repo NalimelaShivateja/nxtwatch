@@ -48,7 +48,7 @@ const VideoCard = props => {
         {val => {
           const {changeActiveMenu} = val
           return (
-            <VideoCardContainer as="li">
+            <VideoCardContainer as="li" key={id}>
               <Link
                 to={`/videos/${id}`}
                 className="link"

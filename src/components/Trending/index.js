@@ -40,7 +40,7 @@ class Trending extends Component {
   }
 
   getVideos = async () => {
-    this.setState({apiStatus: apiStatusConstants.inProgress})
+    await this.setState({apiStatus: apiStatusConstants.inProgress})
 
     const jwtToken = Cookies.get('jwt_token')
     const url = 'https://apis.ccbp.in/videos/trending'
@@ -52,9 +52,9 @@ class Trending extends Component {
     }
 
     const response = await fetch(url, options)
-    const data = await response.json()
 
     if (response.ok === true) {
+      const data = await response.json()
       const updatedData = data.videos.map(eachItem => ({
         id: eachItem.id,
         channel: {

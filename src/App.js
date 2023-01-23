@@ -105,8 +105,9 @@ class App extends Component {
                 path="/videos/:id"
                 component={VideoItemDetails}
               />
-              <ProtectedRoute exact path="/not-found" component={NotFound} />
-              <Redirect to="/not-found" />
+              {/* <ProtectedRoute exact path="/not-found" component={NotFound} />
+              <Redirect to="/not-found" /> */}
+              <Route component={NotFound} />
             </Switch>
           </ActiveMenuContext.Provider>
         </SavedVideosContext.Provider>

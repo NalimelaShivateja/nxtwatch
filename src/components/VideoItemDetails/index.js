@@ -69,9 +69,9 @@ class VideoItemDetails extends Component {
     }
 
     const response = await fetch(url, options)
-    const data = await response.json()
 
     if (response.ok === true) {
+      const data = await response.json()
       const updatedData = {
         videoDetails: data.video_details,
       }

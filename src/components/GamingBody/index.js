@@ -26,7 +26,7 @@ const GamingBody = props => {
           const {changeActiveMenu} = val
 
           return (
-            <VideoCardContainer>
+            <VideoCardContainer as="li">
               <Link
                 to={`/videos/${id}`}
                 className="link"
