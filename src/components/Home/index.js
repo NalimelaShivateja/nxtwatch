@@ -173,9 +173,9 @@ class Home extends Component {
               We are having some trouble to complete your request. Please try
               again
             </FailureText>
-            <button type="button" onClick={this.getVideos}>
+            <RetryButton type="button" onClick={this.getVideos}>
               Retry
-            </button>
+            </RetryButton>
           </FailureContainer>
         )
       }}

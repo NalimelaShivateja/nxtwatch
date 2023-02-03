@@ -40,7 +40,7 @@ class Trending extends Component {
   }
 
   getVideos = async () => {
-    await this.setState({apiStatus: apiStatusConstants.inProgress})
+    this.setState({apiStatus: apiStatusConstants.inProgress})
 
     const jwtToken = Cookies.get('jwt_token')
     const url = 'https://apis.ccbp.in/videos/trending'
